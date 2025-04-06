@@ -1,18 +1,13 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class StudentAgeComparator implements Comparator<Student> {
+public class StudentAgeComparator implements Comparator<Student>{
 @Override
     public int compare(Student s1, Student s2) {
-        String pn1 = extractPersonNumber(s1);
-        String pn2 = extractPersonNumber(s2);
-        return pn2.compareTo(pn1);
-    }
-
-    private String extractPersonNumber(Student s) {
-        String str = s.toString();
-        String[] parts = str.split("pn: ")[1].split(",", 2);
-        return parts[0].trim();
+        String birth1 = s1.toString().split("pn: ")[1].split(",")[0].trim().substring(0, 6);
+        String birth2 = s2.toString().split("pn: ")[1].split(",")[0].trim().substring(0, 6);
+        
+        return birth2.compareTo(birth1);
     }
 
     public static void main(String[] args) {
