@@ -11,7 +11,6 @@ public class Student implements Comparable<Student>{
     lastName     = ln;
     credits      = 0;
   }
-@Override
   public String toString(){
     return "[Student]/"
           + lastName + ", " + firstName + ", pn: " + personNumber
@@ -21,9 +20,8 @@ public class Student implements Comparable<Student>{
   public boolean equals(Student that){
     return that.personNumber.equals(this.personNumber) && 
       that.firstName.equals(this.firstName) && 
-      that.lastName.equals(this.lastName);
+      that.lastName.equals(this.lastName); 
   }
-@Override
   public int compareTo(Student that){
     int lastNameComparison = this.lastName.compareTo(that.lastName);
     if (lastNameComparison != 0) {

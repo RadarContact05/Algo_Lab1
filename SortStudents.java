@@ -39,7 +39,6 @@ public class SortStudents{
                 System.out.println("error");
                 return;
         }
-
         for (Student s : students) {
             System.out.println(s);
         }
