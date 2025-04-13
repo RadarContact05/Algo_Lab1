@@ -36,7 +36,6 @@ public class Xarray<T>{
     data[i] = x;
   }
 
-
   public int size(){
     return size;
   }
